@@ -1367,8 +1367,8 @@ var Brick = Class.create(DisplayObject, {
 
   applyStyle: function(context) {
 
-    Brick.FILL = "#FF4020";
-    Brick.STROKE = "#400000";
+    Brick.FILL = "#75BABA"; // brick fill color
+    Brick.STROKE = "#001140"; // brick outline color
 
     context.fillStyle = Brick.FILL;
     context.strokeStyle = Brick.STROKE;
@@ -3064,7 +3064,7 @@ var BallBox = Class.create(Brick, {
 
         context.save();
 
-        context.fillStyle = "#800000";
+        context.fillStyle = "#FFBB00"; // shooter triangle color
         context.fill();
 
         context.restore();
@@ -3217,7 +3217,7 @@ Grid = Class.create(DisplayObject, {
 
   drawGrid: function (context) {
 
-    context.strokeStyle = "#FFFFFF";
+    context.strokeStyle = "#FFFFFF"; // grid lines color
     context.lineWidth = 0.2;
 
     var i;
@@ -3611,7 +3611,7 @@ var Field = Class.create(Grid, {
   },
 
   drawBodies: function(context) {
-    context.strokeStyle = "#FF0000";
+    context.strokeStyle = "#00FFFF"; // idk color
     context.lineWidth = 1;
 
     context.save();
@@ -4600,7 +4600,7 @@ var Editor = Class.create(Renderer, {
 
         this.dynamicContext.save();
 
-        this.dynamicContext.fillStyle = "#CCEEFF";
+        this.dynamicContext.fillStyle = "#CCEEFF"; // hover color
         this.dynamicContext.globalAlpha = 0.3;
 
         this.hoverElement.draw(this.dynamicContext);
@@ -4613,7 +4613,7 @@ var Editor = Class.create(Renderer, {
 
         this.dynamicContext.save();
 
-          this.dynamicContext.fillStyle = "#50AAFF";
+          this.dynamicContext.fillStyle = "#50AAFF"; // select color
           this.dynamicContext.globalAlpha = 0.5;
 
           this.selectElement.draw(this.dynamicContext);
