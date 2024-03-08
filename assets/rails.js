@@ -1485,7 +1485,11 @@ Ajax.Request = Class.create(Ajax.Base, {
 
   request: function(url) {
     //this.url = 'https://api.allorigins.win/get?url=' + encodeURIComponent(url);
-    this.url = "https://cors-anywhere-tc2c.onrender.com/" + url;
+    if (this.options.method == "get") {
+      this.url = "https://cors-anywhere-tc2c.onrender.com/" + url;
+    } else {
+      this.url = "https://marble-backend.onrender.com/sendtrack";
+    };
     
     this.method = this.options.method;
     var params = Object.clone(this.options.parameters);

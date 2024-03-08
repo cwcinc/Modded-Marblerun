@@ -651,7 +651,7 @@ $('userName').observe('blur', function(event) {
 
 $('overviewPreviousButton').observe('click', function(event) {
   if (!$('overviewPreviousButton').hasClassName("inactive")) {
-    var url = "/tracks?page=" + (currentPage - 1);
+    var url = "https://marblerun.at/tracks?page=" + (currentPage - 1);
 
     if (currentKeyWord.length > 0) {
       url += "&search=" + currentKeyWord;
@@ -667,7 +667,7 @@ $('overviewPreviousButton').observe('click', function(event) {
 
 $('overviewNextButton').observe('click', function(event) {
   if (!$('overviewNextButton').hasClassName("inactive")) {
-    var url = "/tracks?page=" + (currentPage + 1);
+    var url = "https://marblerun.at/tracks?page=" + (currentPage + 1);
 
     if (currentKeyWord.length > 0) {
       url += "&search=" + currentKeyWord;
@@ -691,7 +691,7 @@ $('dateSortButton').observe('click', function(event) {
   currentKeyWord = "";
   currentSorting = "date"
 
-  var url = '/tracks/?sorting=';
+  var url = 'https://marblerun.at/tracks/?sorting=';
   url += 'date';
   url += '&page=1';
   contentLoader.loadContent(url, true);
@@ -709,7 +709,7 @@ $('likesSortButton').observe('click', function(event) {
   currentKeyWord = "";
   currentSorting = "likes"
 
-  var url = '/tracks/?sorting=';
+  var url = 'https://marblerun.at/tracks/?sorting=';
   url += 'likes';
   url += '&page=1';
   contentLoader.loadContent(url, true);
@@ -724,7 +724,7 @@ document.getElementById('searchForm').onsubmit = function() {
   $('dateSortButton').addClassName("inactive");
   $('likesSortButton').addClassName("inactive");
 
-  var url = '/tracks/?search=';
+  var url = 'https://marblerun.at/tracks/?search=';
   url += document.getElementById('searchField').value;
   url += '&page=1';
 
@@ -807,7 +807,7 @@ var setToggleElementsVisibility = function(visibleElements) {
 };
 
 var getCurrentOverViewPath = function() {
-  var url = "/tracks?page=" + currentPage;
+  var url = "https://marblerun.at/tracks?page=" + currentPage;
 
   if (currentKeyWord.length > 0) {
     url += "&search=" + currentKeyWord;
@@ -5491,7 +5491,7 @@ var ContentLoader = Class.create({
       case "overview":
         this.oldContent = null;
         this.createOverviewMode(content);
-        path = "/tracks?page=" + currentPage;
+        path = "https://marblerun.at/tracks?page=" + currentPage;
 
         if (currentKeyWord.length > 0) {
           path += "&search=" + currentKeyWord;
