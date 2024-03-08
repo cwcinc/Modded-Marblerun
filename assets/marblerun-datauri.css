@@ -157,7 +157,7 @@ table#contentTable {
 td#sidebar {
   width: 342px;
   height: 100%;
-  background: url(../images/background-gray.png?1610987863) repeat-y;
+  background: url(../images/background-2.jpg) repeat-y;
 }
 
 td#sidebar div#modeSwitch {
@@ -389,7 +389,7 @@ td#sidebar div#lastTrackHolder div  img{
 td#sidebar div#lastTrackHolder div div.background {
   width: 120px;
   height: 180px;
-  background: url(../images/modded-background.jpg);
+  background: url(../images/background-3.jpg);
   background-position: center;
   position: absolute;
   z-index: 9;
@@ -413,7 +413,7 @@ td#sidebar div#lastTrackHolder div div div#latestInfo {
 
 td#content {
   height: 100%;
-  background: url(../images/modded-background.jpg) repeat;
+  background: url(../images/background-5.png) repeat;
   vertical-align: top;
   overflow: hidden;
 }
