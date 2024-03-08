@@ -613,18 +613,6 @@ $("galleryButton").observe('click', function(event) {
   contentLoader.loadContent(getCurrentOverViewPath());
 });
 
-$("menuAbout").observe('click', function(event) {
-  contentLoader.parseResponse({responseJSON: {mode:"about"}}, true);
-});
-
-$("menuImprint").observe('click', function(event) {
-  contentLoader.parseResponse({responseJSON: {mode:"imprint"}}, true);
-});
-
-$("menuContact").observe('click', function(event) {
-  contentLoader.parseResponse({responseJSON: {mode:"contact"}}, true);
-});
-
 $('trackName').observe('focus', function(event) {
   if (this.value === 'TRACK NAME') {
     this.value = '';
