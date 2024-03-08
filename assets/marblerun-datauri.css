@@ -62,6 +62,30 @@ a {
     background:transparent;
 }
 
+a:link {
+  color: #ffdbc2;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #fe9faf;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d280ff;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #00ffd5;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 /* change colours to suit your needs */
 ins {
     background-color:#b499ff;
