@@ -505,7 +505,7 @@ div#editorControlsBottom form input {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
   color: #333;
-  background: url(../images/editor-text-background.png?1610987863) no-repeat transparent;
+  background: url(../images/new-editor-text-background.jpg) no-repeat transparent;
   border: none;
   padding: 2px 5px 0 5px;
   margin-top: 9px;
@@ -756,7 +756,7 @@ a.editorButton {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
   color: #333;
-  background: url(../images/editor-text-background.png?1610987863) no-repeat transparent;
+  background: url(../images/new-editor-text-background.jpg) no-repeat transparent;
   border: none;
   padding: 0 3px;
 }
