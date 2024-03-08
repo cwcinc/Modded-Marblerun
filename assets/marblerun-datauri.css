@@ -137,7 +137,7 @@ body, html {
   width: 100%;
   min-width: 1000px;
   background: #0d0d0d;
-  font-family: "Lucida Handwriting", cursive;
+  font-family: 'Comic Sans MS', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #7aa7ff;
 }
 
@@ -502,9 +502,9 @@ div#editorControlsBottom form input {
   float: right;
   font-size: 9px;
   margin-left: 4px;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Comic Sans MS', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: bold;
-  color: #333;
+  color: #0c0029;
   background: url(../images/new-editor-text-background.jpg) no-repeat transparent;
   border: none;
   padding: 2px 5px 0 5px;
@@ -868,6 +868,7 @@ p.no-track-warning {
   padding-top: 30px;
   visibility: hidden;
   z-index: 199;
+  font-family: "Lucida Handwriting", cursive;
 }
 
 #firstVisitCloseButton {
