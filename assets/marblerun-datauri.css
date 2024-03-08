@@ -161,7 +161,7 @@ td#sidebar {
 }
 
 td#sidebar div#modeSwitch {
-  background: url(../images/sidebar-switch.png?1610987863) no-repeat;
+  background: url(../images/new-sidebar-switch.png) no-repeat;
   width: 224px;
   height: 29px;
   display: block;
