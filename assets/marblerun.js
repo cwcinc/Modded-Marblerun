@@ -3242,15 +3242,16 @@ Grid = Class.create(DisplayObject, {
 
   drawGrid: function (context) {
 
-    context.strokeStyle = "#000000";
-    context.lineWidth = 0.5;
+    context.strokeStyle = "#FFFFFF";
+    context.lineWidth = 0.2;
 
     var i;
 
     for (i = 1; i < this.rows; i++) {
 
       context.beginPath();
-      context.dashedLine(0, i * Brick.SIZE, this.cols * Brick.SIZE, i * Brick.SIZE, 3);
+      context.moveTo(0, i * Brick.SIZE); // Start at the same point as dashedLine
+      context.lineTo(this.cols * Brick.SIZE, i * Brick.SIZE); // Draw a straight line
       context.closePath();
 
       context.stroke();
@@ -3260,10 +3261,9 @@ Grid = Class.create(DisplayObject, {
     for (i = 1; i < this.cols; i++) {
 
       context.beginPath();
-      context.dashedLine(i * Brick.SIZE, 0,  i * Brick.SIZE, this.rows * Brick.SIZE, 3);
-      context.closePath();
-
-      context.stroke();
+      context.moveTo(i * Brick.SIZE, 0);  // Set starting point
+      context.lineTo(i * Brick.SIZE, this.rows * Brick.SIZE);  // Draw normal line to end point
+      context.stroke();  // Apply the drawn line to the canvas
 
     }
 
