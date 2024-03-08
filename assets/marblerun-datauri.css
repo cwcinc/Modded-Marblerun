@@ -27,6 +27,10 @@ time, mark, audio, video {
     background:transparent;
 }
 
+html {
+  max-height: 200px;
+}
+
 body {
     line-height:1;
 }
@@ -60,14 +64,14 @@ a {
 
 /* change colours to suit your needs */
 ins {
-    background-color:#ff9;
+    background-color:#b499ff;
     color:#000;
     text-decoration:none;
 }
 
 /* change colours to suit your needs */
 mark {
-    background-color:#ff9;
+    background-color:#c799ff;
     color:#000; 
     font-style:italic;
     font-weight:bold;
@@ -108,9 +112,9 @@ body, html {
   height: 100%;
   width: 100%;
   min-width: 1000px;
-  background: #F2E049;
-  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-  color: #F6F254;
+  background: #0d0d0d;
+  font-family: "Lucida Handwriting", cursive;
+  color: #7aa7ff;
 }
 
 
@@ -361,7 +365,7 @@ td#sidebar div#lastTrackHolder div  img{
 td#sidebar div#lastTrackHolder div div.background {
   width: 120px;
   height: 180px;
-  background: url(../images/background-yellow.png?1610987863);
+  background: url(../images/modded-background.jpg);
   background-position: center;
   position: absolute;
   z-index: 9;
@@ -385,7 +389,7 @@ td#sidebar div#lastTrackHolder div div div#latestInfo {
 
 td#content {
   height: 100%;
-  background: url(../images/background-yellow.png?1610987863) repeat;
+  background: url(../images/modded-background.jpg) repeat;
   vertical-align: top;
   overflow: hidden;
 }
@@ -488,7 +492,7 @@ div#editorControlsBottom div#lengthDisplay {
   width: 78px;
   height: 18px;
   float: left;
-  color: #EBE63F;
+  color: #3da8eb;
   padding: 12px 0 0 5px;
   font-family: "Courier New", Courier, monospace;
   font-size: 13px;
@@ -816,7 +820,7 @@ p.no-track-warning {
 }
 
 #helpBox p {
-  color: #f6f254;
+  color: #55f7ec;
   margin-bottom: 10px;
 }
 
