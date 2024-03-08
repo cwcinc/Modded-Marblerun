@@ -2222,7 +2222,7 @@ var Ball = Class.create(Brick, {
         context.rotate(this.body.GetAngle());
       }
 
-      context.fillStyle = "#0040F0";
+      context.fillStyle = "#DDEEFF"; // ball color
 
       context.beginPath();
       context.arc(0, 0, Ball.radius * Brick.SIZE, 0, Math.PI * 2, true);
