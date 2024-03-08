@@ -3344,8 +3344,8 @@ Grid = Class.create(DisplayObject, {
   getCell: function(x, y) {
     if (x > 0 && y > 0 && x < this.width && y < this.height) {
       return {
-        row: parseInt(y / Brick.SIZE, 10), 
-        col: parseInt(x / Brick.SIZE, 10)
+        row: (Math.round(parseFloat(y / Brick.SIZE, 10) * 4) / 4) - 0.5, 
+        col: (Math.round(parseFloat(x / Brick.SIZE, 10) * 4) / 4) - 0.5
       };
     }
 
