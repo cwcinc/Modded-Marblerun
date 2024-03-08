@@ -4626,8 +4626,8 @@ var Editor = Class.create(Renderer, {
 
         this.dynamicContext.save();
 
-          this.dynamicContext.fillStyle = "#800000";
-          this.dynamicContext.globalAlpha = 0.3;
+          this.dynamicContext.fillStyle = "#50AAFF";
+          this.dynamicContext.globalAlpha = 0.5;
 
           this.selectElement.draw(this.dynamicContext);
 
