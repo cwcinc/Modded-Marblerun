@@ -3501,12 +3501,12 @@ var Toolbox = Class.create(Grid, {
 
     if (brick && brick.isDraggable && this.parent.selectElement && this.parent.selectElement.brick === brick) {
 
-      brick.rotate(Math.PI / 2);
+      brick.rotate(Math.PI / 4);
       this.renderNew = true;
 
       if (brick.partner) {
 
-        brick.partner.rotate(Math.PI / 2);
+        brick.partner.rotate(Math.PI / 4);
 
       }
 
