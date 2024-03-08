@@ -1484,8 +1484,8 @@ Ajax.Request = Class.create(Ajax.Base, {
   },
 
   request: function(url) {
-    this.url = 'https://api.allorigins.win/get?url=' + encodeURIComponent(url);
-    this.url = url;
+    //this.url = 'https://api.allorigins.win/get?url=' + encodeURIComponent(url);
+    this.url = "https://cors-anywhere-tc2c.onrender.com/" + url;
     
     this.method = this.options.method;
     var params = Object.clone(this.options.parameters);
@@ -1773,7 +1773,7 @@ Ajax.PeriodicalUpdater = Class.create(Ajax.Base, {
 
     this.updater = {};
     this.container = container;
-    this.url = 'https://api.allorigins.win/get?url=' + encodeURIComponent(url);
+    this.url = url; //'https://api.allorigins.win/get?url=' + encodeURIComponent(url);
 
     this.start();
   },

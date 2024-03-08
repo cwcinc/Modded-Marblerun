@@ -5391,7 +5391,7 @@ var ContentLoader = Class.create({
       sidebarController = new SidebarController();
 
       /* set page and search value on initial site call */
-      var path = window.location.href;
+      var path = "https://marblerun.at/";
       var strippedLink = path.substr(path.indexOf("/", 7))
       if (strippedLink.substr(0, 8) == "/tracks?") {
 
