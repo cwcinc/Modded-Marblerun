@@ -1706,15 +1706,6 @@ Ajax.Response = Class.create({
 
   _getHeaderJSON: function() {
     return null; // CWC ADDITION
-    var json = this.getHeader('X-JSON');
-    if (!json) return null;
-    json = decodeURIComponent(escape(json));
-    try {
-      return json.evalJSON(this.request.options.sanitizeJSON ||
-        !this.request.isSameOrigin());
-    } catch (e) {
-      this.request.dispatchException(e);
-    }
   },
 
   _getResponseJSON: function() {
