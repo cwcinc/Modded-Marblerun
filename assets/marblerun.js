@@ -5041,17 +5041,6 @@ var Showroom = Class.create(Renderer, {
       $('showroomLikeButton').stopObserving();
       $('showroomLikeButton').setStyle({display: "none"});
     }
-
-    if (Cookie.flagedTracks.indexOf(this.trackID) === -1) {
-      $('showroomFlagButton').observe('click', function() {
-        myScope.flag();
-      });
-
-      $('showroomFlag').setStyle({display: "block"});
-    } else {
-      $('showroomFlagButton').stopObserving();
-      $('showroomFlag').setStyle({display: "none"});
-    }
   },
 
   startRender: function($super) {
