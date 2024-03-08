@@ -3939,7 +3939,7 @@ var Field = Class.create(Grid, {
 
     if (brick) {
 
-      brick.rotate(Math.PI / 2);
+      brick.rotate(Math.PI / 8);
 
       this.validTrack = false;
       $('publishButton').removeClassName('activePublish');
