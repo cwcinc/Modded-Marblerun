@@ -3231,7 +3231,7 @@ Grid = Class.create(DisplayObject, {
 
       context.translate(-0.5, -0.5);
 
-      context.strokeStyle = "#2D2D2D";
+      context.strokeStyle = "#40CCCC";
       context.lineWidth = 2;
 
       context.strokeRect(0, 0, this.width, this.height);
