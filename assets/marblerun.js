@@ -5340,7 +5340,7 @@ var ContentLoader = Class.create({
     Pattern.loadPattern([
       {name: "meterBackground", path: "./images/sidebar-meter-background.png"},
       {name: "meterForeground", path: "./images/sidebar-meter-foreground.png"},
-      {name: "meterPointer", path: "./images/sidebar-meter-pointer.png"},
+      {name: "meterPointer", path: "./images/new-sidebar-meter-pointer.png"},
       {name: "fieldBackground", path: "./images/background-yellow.png"}
     ]);
 
