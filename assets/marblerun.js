@@ -1392,11 +1392,14 @@ var Brick = Class.create(DisplayObject, {
 
   applyStyle: function(context) {
 
+    Brick.FILL = "#FF4020";
+    Brick.STROKE = "#400000";
+
     context.fillStyle = Brick.FILL;
     context.strokeStyle = Brick.STROKE;
 
-    context.lineJoing = "miter";
-    context.lineWidth = 1;
+    context.lineJoin = "round";
+    context.lineWidth = 2;
 
   },
 
