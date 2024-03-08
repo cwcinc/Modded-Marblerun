@@ -1,31 +1,6 @@
-/**
- * Small Cookies JavaScript Helper
- *
- * Source code available at http://github.com/tdd/cookies-js-helper
- *
- * Copyright (c) 2010 Christophe Porteneuve <tdd@tddsworld.com>
- *
- * Permission is hereby granted, free of charge, to any person
- * obtaining a copy of this software and associated documentation
- * files (the "Software"), to deal in the Software without
- * restriction, including without limitation the rights to use,
- * copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the
- * Software is furnished to do so, subject to the following
- * conditions:
- *
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
- * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
- * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
- * OTHER DEALINGS IN THE SOFTWARE.
- */
+const requireCompletion = false;
+
+
 
 (function(scope) {
 
@@ -3567,6 +3542,11 @@ var Field = Class.create(Grid, {
     this.trackLength = 0;
     this.startTick = 0;
     this.endTick = 0;
+
+    if (!requireCompletion) {
+      this.validTrack = true;
+      $('publishButton').addClassName('activePublish');
+    }
   },
 
   setup: function() {
@@ -3903,9 +3883,11 @@ var Field = Class.create(Grid, {
 
     if ($super(brick, cell)) {
       brick.createBody(this.world);
-
-      this.validTrack = false;
-      $('publishButton').removeClassName('activePublish');
+      
+      if (requireCompletion) {
+        this.validTrack = false;
+        $('publishButton').removeClassName('activePublish');
+      }
     }
   },
 
@@ -3917,9 +3899,10 @@ var Field = Class.create(Grid, {
 
         brick.removeBody(this.world);
 
-        this.validTrack = false;
-        $('publishButton').removeClassName('activePublish');
-
+        if (requireCompletion) {
+          this.validTrack = false;
+          $('publishButton').removeClassName('activePublish');
+        }
         return true;
 
       } else {
@@ -3941,9 +3924,10 @@ var Field = Class.create(Grid, {
 
       brick.rotate(Math.PI / 8);
 
-      this.validTrack = false;
-      $('publishButton').removeClassName('activePublish');
-
+      if (requireCompletion) {
+        this.validTrack = false;
+        $('publishButton').removeClassName('activePublish');
+      }
     } else if (cell && this.parent.selectElement && this.parent.selectElement.brick) {
 
       var dropBrick = new (eval(this.parent.selectElement.brick.type))();
@@ -3972,9 +3956,10 @@ var Field = Class.create(Grid, {
 
         this.parent.dragBrick(draggedBrick);
 
-        this.validTrack = false;
-        $('publishButton').removeClassName('activePublish');
-
+        if (requireCompletion) {
+          this.validTrack = false;
+          $('publishButton').removeClassName('activePublish');
+        }
       }
 
     } else {
@@ -4082,8 +4067,10 @@ var Field = Class.create(Grid, {
 
     }
 
-    this.validTrack = false;
-    $('publishButton').removeClassName('activePublish');
+    if (requireCompletion) {
+      this.validTrack = false;
+      $('publishButton').removeClassName('activePublish');
+    }
   },
 
   resetTrack: function() {
