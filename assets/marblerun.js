@@ -5381,10 +5381,10 @@ var ContentLoader = Class.create({
 
     Pattern.context = meterCanvas.getContext("2d");
     Pattern.loadPattern([
-      {name: "meterBackground", path: "../images/sidebar-meter-background.png"},
-      {name: "meterForeground", path: "../images/sidebar-meter-foreground.png"},
-      {name: "meterPointer", path: "../images/sidebar-meter-pointer.png"},
-      {name: "fieldBackground", path: "../images/background-yellow.png"}
+      {name: "meterBackground", path: "./images/sidebar-meter-background.png"},
+      {name: "meterForeground", path: "./images/sidebar-meter-foreground.png"},
+      {name: "meterPointer", path: "./images/sidebar-meter-pointer.png"},
+      {name: "fieldBackground", path: "./images/background-yellow.png"}
     ]);
 
     Pattern.onload = function() {
