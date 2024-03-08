@@ -1705,6 +1705,7 @@ Ajax.Response = Class.create({
   },
 
   _getHeaderJSON: function() {
+    return null; // CWC ADDITION
     var json = this.getHeader('X-JSON');
     if (!json) return null;
     json = decodeURIComponent(escape(json));
