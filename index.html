@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="author" content="Eberhard Gräther">
+  <meta name="author" content="Matthias Hempt">
+  <meta name="author" content="Nicola Lieser">
+  <meta name="author" content="Mathias Paumgarten">
+  <meta name="author" content="David Strauß">
+
+  <title>MARBLE RUN</title>
+
+  <!--[if (!IE)|(gte IE 8)]><!-->
+<link href="/assets/marblerun-datauri.css?1610987863" media="screen" rel="stylesheet" type="text/css" />
+<!--<![endif]-->
+<!--[if lte IE 7]>
+<link href="/assets/marblerun-mhtml.css?1610987863" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+  <script src="/assets/rails.js?1610987863" type="text/javascript"></script>
+  <meta content="authenticity_token" name="csrf-param" />
+<meta content="DEU+ZHhvPBgkOZ4nQluvKv5ZwkEAotYwex1kh+TeCz0=" name="csrf-token" />
+
+</head>
+
+<body>
+
+  <noscript>You're chillin' in the wrong turf, bro!</noscript>
+
+  <table id="contentTable">
+    <tr>
+      <td id="sidebar">
+
+        <header>
+            <a href="/tracks/new"><h1>Marble Run</h1></a>
+        </header>
+
+        <div id="modeSwitch">
+          <a id="buildSwitch">Build Mode</a>
+          <a id="viewSwitch">View Mode</a>
+        </div>
+
+        <div id="lengthMeterReflection" class="glasReflection"></div>
+        <div id="lengthMeter">
+          0000000
+        </div>
+
+        <div id="brickMeterHolder">
+          <canvas id="brickMeterCanvas"></canvas>
+        </div>
+
+        <div id="latestTrackReflection" class="glasReflection"></div>
+        <div id="lastTrackHolder">
+        </div>
+
+      </td>
+
+      <td id="content">
+
+        <div id="menu">
+
+          <a id="menuAbout">About</a>
+          <a id="menuImprint">Imprint</a>
+          <a id="menuContact">Contact</a>
+
+        </div>
+
+        <a id="fontButton" href="../font/MARBLERUN.zip">
+          Download font
+        </a>
+
+        <div id="overviewControls" class="toggleElement">
+
+          <span>SORT GALLERY BY</span>
+
+          <ul>
+            <li id="dateSortButton" class="active">DATE</li>
+            <li id="likesSortButton" class="inactive">LIKES</li>
+
+            <li>
+              <form id="searchForm">
+                <input id="searchField" type="text" tabindex="1" />
+                <input id="searchSubmit" type="submit" />
+              </form>
+            </li>
+          </ul>
+
+          <a id="overviewPreviousButton" class="editorButton">Previous Page</a>
+          <a id="overviewNextButton" class="editorButton">Next Page</a>
+
+          <div id="overviewPageDisplay"> PAGE 0 OF 4 </div>
+
+        </div>
+
+        <div id="overviewGrid" class="toggleElement">
+        </div>
+
+        <div id="aboutPage" class="subPage toggleElement">
+          <h2>MARBLE RUN</h2>
+
+          <h3>ABOUT THE GAME</h3>
+          <p>
+            MARBLE RUN is a collaborative attempt to build<br> the longest marble run on earth! There are different <br>types of bricks available to build tracks with.
+          </p>
+          <p>
+            Every user-built track that is added to the marble <br>run increases the total length of the over all track. <br>With increasing length more and more special bricks <br>get unlocked to allow you to build even more tracks!
+          </p>
+
+          <h3>MOZILLA GAME ON 2010</h3>
+          <p>
+            This game was developed by students of the Salzburg University of Applied Science for the <a href="https://gaming.mozillalabs.com/">Game On 2010</a> challenge hosted by Mozilla.
+          </p>
+
+          <h3>CREATED BY</h3>
+          <a href="http://egraether.com">Eberhard Gräther (WEB / CONCEPT)</a><br>
+          <a href="http://hempt.at">Matthias Hempt (DESIGN / CONCEPT)</a><br>
+          <a href="http://nicolalieser.com">Nicola Lieser (DESIGN / CONCEPT)</a><br>
+          <a href="http://mathias-paumgarten.com">Mathias Paumgarten (WEB / CONCEPT)</a><br>
+          <a href="http://stravid.com">David Strauß (WEB / CONCEPT)</a><br>
+        </div>
+
+        <div id="imprintPage" class="subPage toggleElement">
+          <h2>IMPRINT</h2>
+
+          David Strauß<br>
+          Lebachstraße 20/2<br>
+          5322 Hof bei Salzburg<br>
+          Austria<br>
+
+          <br>
+          david@strauss.io
+
+          <br><br>
+
+          <h2>Privacy Policy</h2>
+
+          <p>
+            Responsible for the processing of your personal data on our website is David Strauß. The data of David Strauß can be found in the <a href="/imprint">imprint</a>.
+          </p>
+
+          <h2>Data Protection</h2>
+
+          <p>
+            We take the protection of your personal data very seriously. We process your personal data in accordance with the statutory data protection regulations and this privacy policy.
+          </p>
+
+          <p>
+            The use of our website is usually possible without providing personal information. When we ask for personal data (for example name, address or email addresses) it is based on free will, if possible.
+          </p>
+
+          <h2>Privacy Coordinator</h2>
+
+          <p>
+            Our privacy coordinator can be reached at:
+          </p>
+
+          <p>
+            David Strauß<br>
+            Lebachstraße 20/2<br>
+            5322 Hof bei Salzburg<br>
+            Austria
+            <br><br>
+            Telephone: +43 664 2164034<br>
+            Email: david@strauss.io
+          </p>
+
+          <h2>Data Processors</h2>
+
+          <p>
+            We process your personal information with the assistance of data processors who assist us in providing our services (e.g., web host, e-mail newsletter shipping service).
+          </p>
+
+          <ul>
+            <li>Host Europe</li>
+          </ul>
+
+          <p>
+            These processors are committed to the strict protection of your personal information and may not process your personal information for any purpose other than to provide our services.
+          </p>
+
+          <p>
+            A transfer of your personal data takes place only to business-typical service providers such as banks (in the case of transfers to you), tax advisers (if you occur in our accounting department), shipping service providers (in case of deliveries to you), etc.
+          </p>
+
+          <h2>Server Log File</h2>
+
+          <p>
+            This website processes the following personal data in a server log file for the purpose of monitoring the technical function and increasing the reliability of the web server on the basis of the predominant legitimate interests of the person responsible (technical security measures):
+          </p>
+
+          <ul>
+            <li>Requested content</li>
+            <li>Timestamp of request</li>
+            <li>Browser user agent</li>
+            <li>Operating system</li>
+            <li>Referer URL</li>
+            <li>Anonymized IP-Adress</li>
+            <li>Hostname</li>
+          </ul>
+
+          <h2>Cookies</h2>
+
+          <p>This site uses cookies.</p>
+
+          <p>
+            Cookies make websites more user-friendly and efficient for the user. A cookie is a small text file used to store information. When visiting a website, the website may place a cookie on the website visitor's computer. If the user revisits the website later, the website may read the data of the previously stored cookie, e.g. determine if the user has visited the site before and which areas of the site the user was particularly interested in.
+          </p>
+
+          <p>
+            More information about cookies can be found on <a href="https://en.wikipedia.org/wiki/HTTP_cookie">Wikipedia</a>.
+          </p>
+
+          <h2>Change The Cookie Settings</h2>
+
+          <p>
+            How the web browser handles cookies, which cookies are allowed or denied, the user can specify in the settings of the web browser. Where exactly these settings are depends on the respective web browser. Detailed information can be accessed via the help function of the respective web browser.
+          </p>
+
+          <p>
+              If the use of cookies is restricted, it may not be possible to fully use all functions of this website.
+          </p>
+
+          <h2>Cookies On Our Website</h2>
+
+          <p>
+            Our website processes the following cookies:
+          </p>
+
+          <ul>
+            <li>
+              <p>
+                Absolutely necessary cookies to ensure basic functions of the website
+              </p>
+
+              <ul>
+                <li><em>isFirstVisit</em>: Remember if the instructions were already read.</li>
+                <li><em>_marblerunv2_session</em>: Session Cookie</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h2>Your Rights</h2>
+
+          <p>
+            You have the right to information, correction, deletion and restriction of the processing of personal data.
+          </p>
+
+          <p>
+            You have the right to revoke any consent granted for the processing of your personal data. The legality of the processing of the personal data until the revocation is not affected by the revocation.
+          </p>
+
+          <p>
+            You have the right to object to the processing of your personal data for the purpose of direct mail. In the case of opposition, your personal data will no longer be processed for direct marketing purposes.
+          </p>
+
+          <p>
+            Furthermore, you have the right to complain to the supervisory authority (Österreichische Datenschutzbehörde, Wickenburggasse 8, 1080 Vienna, dsb@dsb.gv.at).
+          </p>
+
+          <h2>MARBLE RUN</h2>
+
+          &copy; 2011<br>
+
+          <a href="http://egraether.com">Eberhard Gräther</a><br>
+          <a href="http://hempt.at">Matthias Hempt</a><br>
+          <a href="http://nicolalieser.com">Nicola Lieser</a><br>
+          <a href="http://mathias-paumgarten.com">Mathias Paumgarten</a><br>
+          <a href="http://stravid.com">David Strauß</a><br>
+
+          <a class="links" href="http://www.fh-salzburg.ac.at/">
+            <img src="../images/logo-mediaCube.png" width="145" height="25">
+            <img src="../images/logo-fhs.png" width="60" height="45">
+          </a>
+
+        </div>
+
+        <div id="contactPage" class="subPage toggleElement">
+          <h2>CONTACT US</h2>
+
+          <a href="mailto:mail@marblerun.at">mail@marblerun.at</a><br>
+
+          <h2 class="notFirst">VISIT MARBLE RUN ON</h2>
+
+          <a href="http://www.facebook.com/pages/MARBLERUNat/135884619804839" target="_blank">Facebook</a><br>
+          <a href="http://www.twitter.com/themarblerun" target="_blank">@themarblerun</a><br>
+
+        </div>
+
+        <div id="errorPage" class="subPage toggleElement">
+          <h2>ERROR</h2>
+          <div id="errorMessage"></div>
+        </div>
+
+        <div id="loadingPage" class="subPage toggleElement">
+        </div>
+
+        <div id="firstVisitContainer">
+          <a id="firstVisitCloseButton">
+            <img src="../images/first-visit-close.png">
+          </a>
+
+          <div id="firstVisitText">
+            <h2>
+              HEY THERE,<br>
+              WE NEED<br>
+              YOUR HELP!
+            </h2>
+
+            <p>
+              We want to build the longest<br>
+              MARBLE RUN on earth!<br>
+            </p>
+
+            <p>
+              You can be a part of it by<br>
+              building your own track and<br>
+              adding it to the MARBLE RUN!<br>
+            </p>
+
+            <p>
+              By increasing the length of the<br>
+              track, different types of
+              special<br> bricks are going to be
+              available,<br> allowing you to
+              build even <br>more awesome tracks.<br>
+            </p>
+            <p style="color: #ffffff;">
+              This website uses cookies, <a style="color: #ffffff;" href="/imprint">more information</a>.
+            </p>
+            <p style="color: #ffffff;">
+              Supported browsers:<br> Google Chrome, Mozilla Firefox 4 <br>Opera, Safari 5
+            </p>
+          </div>
+        </div>
+
+        <div id="helpBox" class="toggleElement">
+          <h2>DRAG&amp;DROP</h2>
+          <p>
+            Every Brick can be moved by Drag&amp;Drop
+          </p>
+
+          <h2>SELECT</h2>
+          <p>
+            By clicking on a brick in one of the two<br>
+            toolboxes on the right you select it for<br>
+            further use.
+          </p>
+
+          <h2>PLACE</h2>
+          <p>
+            Click on an empty cell in the grid to place<br>
+            the selected brick. You can also drag bricks<br>
+            directly from the toolbox on the grid.
+          </p>
+
+          <h2>ROTATE</h2>
+          <p>
+            By clicking on a brick you rotate it.<br>
+            This works also on the currently selected<br>
+            brick in the toolbox.
+          </p>
+
+          <h2>REMOVE</h2>
+            <p>
+              To remove a brick you have to drag it off the<br>
+              grid (and release it).
+            </p>
+
+          <h2>MULTI PLACE</h2>
+          <p>
+            To place multiple bricks of the same kind<br>
+            you can "paint" on the grid! Simply hold down<br>
+            the left mouse button and move around.
+          </p>
+
+          <h2>MULTI REMOVE</h2>
+          <p>
+            If you select the empty cell in the toolbox<br>
+            you can use the above described "MULTI PLACE"<br>
+            method to remove multiple bricks at once.
+          </p>
+        </div>
+
+        <div id="editorControlsTop" class="editorsControls controlsTop toggleElement">
+
+          <a id="runButton" class="editorButton">Run</a>
+          <a id="helpButton" class="editorButton">Help</a>
+          <a id="clearButton" class="editorButton">Clear</a>
+
+        </div>
+
+        <div id="showroomControlsTop" class="editorsControls controlsTop toggleElement">
+          <a id="showButton" class="editorButton">Run</a>
+          <a id="galleryButton" class="editorButton">Back To Gallery</a>
+          <a id="newTrackButton" class="editorButton">Build New Track</a>
+        </div>
+
+        <div id="editorControlsBottom" class="editorsControls controlsBottom toggleElement">
+
+          <div id="lengthDisplay">
+            0000
+          </div>
+
+          <form>
+            <input id="userName" type="text" tabindex="2" value="YOUR NAME" />
+            <input id="trackName" type="text" tabindex="1" value="TRACK NAME" />
+          </form>
+
+          <a id="publishButton" class="publishButton activePublish">Publish</a>
+          <div id="publishButtonWarning">
+            You can't publish until the ball reaches the exit!
+          </div>
+
+          <div class="editor-non-float-container">
+            <div class="duration-box">
+              <strong>Duration</strong>
+              <br>
+              <span id="durationDisplayEditor">0 Seconds</span>
+            </div>
+          </div>
+
+          <p class="dartboardio-notice">
+            This website uses the entered name and track name to display additional information to a track. You find more information in our <a href="/imprint">Privacy Policy</a>.
+          </p>
+        </div>
+
+        <div id="showroomDetail">
+          <h3 id="tableTrack">SUPERSTAR</h3>
+
+          <table>
+
+            <tr>
+              <td class="leftColumn">BUILDER</td>
+              <td id="tableBuilder" class="rightColumn"></td>
+            </tr>
+
+            <tr>
+              <td class="leftColumn">LENGTH</td>
+              <td id="tableLength" class="rightColumn"></td>
+            </tr>
+
+            <tr>
+              <td class="leftColumn">DURATION</td>
+              <td id="tableDuration" class="rightColumn"></td>
+            </tr>
+
+            <tr>
+              <td class="leftColumn">DATE</td>
+              <td id="tableDate" class="rightColumn"></td>
+            </tr>
+
+            <tr>
+              <td class="leftColumn">TIME</td>
+              <td id="tableTime" class="rightColumn"></td>
+            </tr>
+
+            <tr>
+              <td class="leftColumn">LIKES</td>
+              <td id="tableLikes" class="rightColumn"></td>
+            </tr>
+
+          </table>
+
+          <a id="showroomLikeButton" class="editorButton">Like!</a>
+          <a href="http://www.facebook.com/pages/MARBLERUNat/135884619804839" id="showroomFacebookButton" class="editorButton" target="_blank">Facebook</a>
+          <a id="showroomTwitterButton" class="editorButton" target="_blank">Twitter</a>
+
+          <div id="showroomFlag" class="showroomFlag">
+            <a id="showroomFlagButton">FLAG</a> THIS TRACK IF YOU THINK IT IS<br>
+            INAPPROPRIATE AND/OR OFFENDING.
+          </div>
+
+        </div>
+
+        <div id="showroomControlsBottom" class="editorsControls controlsBottom toggleElement">
+
+          <a id="nextButton" class="editorButton">Next</a>
+          <a id="previousButton" class="editorButton">Previous</a>
+          <a id="autoButton" class="editorButton">Auto</a>
+
+          <div class="editor-non-float-container">
+            <div class="duration-box">
+              <strong>Duration</strong>
+              <br>
+              <span id="durationDisplayShowroom">0 Seconds</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div id="editorToolboxTop" class="toggleElement">
+
+          <div id="basicBricks">Basic Bricks</div>
+          <div id="specialBricks">Special Bricks</div>
+
+        </div>
+
+        <div id="editorToolboxBottom" class="toggleElement">
+
+          <a id="twitterButton" class="editorButton">Twitter</a>
+          <a href="http://www.facebook.com/pages/MARBLERUNat/135884619804839" id="facebookButton" class="editorButton">Facebook</a>
+
+        </div>
+
+        <div class="editor" id="editor">
+
+            <canvas id="staticCanvas"></canvas>
+            <canvas id="dynamicCanvas"></canvas>
+            <canvas id="imageCanvas"></canvas>
+            <div id="editorRuler" class="toggleElement"></div>
+
+        </div>
+
+        
+
+
+      </td>
+    </tr>
+  </table>
+
+  <script src="/assets/marblerun.js?1610987863" type="text/javascript"></script>
+
+</body>
+
+</html>
