@@ -4613,10 +4613,10 @@ var Editor = Class.create(Renderer, {
 
         this.dynamicContext.save();
 
-          this.dynamicContext.fillStyle = "#333333";
-          this.dynamicContext.globalAlpha = 0.15;
+        this.dynamicContext.fillStyle = "#CCEEFF";
+        this.dynamicContext.globalAlpha = 0.3;
 
-          this.hoverElement.draw(this.dynamicContext);
+        this.hoverElement.draw(this.dynamicContext);
 
         this.dynamicContext.restore();
 
