@@ -351,7 +351,7 @@ div#loadingPage {
   height: 25px;
   left: 724px;
   top: 352px;
-  background: url(../images/editor-load.png?1610987863);
+  background: url(../images/new-editor-load.png);
 }
 
 div#loadingPage.blink {
