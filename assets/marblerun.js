@@ -1607,9 +1607,6 @@ Brick.SIZE = 28;
 Brick.BIG_SIZE = 32;
 Brick.TINY_SIZE = 12;
 
-Brick.FILL = "#1E1E1E";
-Brick.STROKE = "#F2E049";
-
 Brick.prototype.type = "Brick";
 
 var Kicker = Class.create(Brick, {
@@ -2225,7 +2222,7 @@ var Ball = Class.create(Brick, {
         context.rotate(this.body.GetAngle());
       }
 
-      context.fillStyle = "#800000";
+      context.fillStyle = "#0040F0";
 
       context.beginPath();
       context.arc(0, 0, Ball.radius * Brick.SIZE, 0, Math.PI * 2, true);
